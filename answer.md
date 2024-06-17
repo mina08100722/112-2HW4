@@ -1,12 +1,12 @@
 # 第4次作業-作業-HW4
 >
->學號：1234567
+>學號：111111117
 ><br />
->姓名：王小明
+>姓名：林郁岑
 ><br />
 >作業撰寫時間：180 (mins，包含程式撰寫時間)
 ><br />
->最後撰寫文件日期：2023/09/22
+>最後撰寫文件日期：2023/6/17
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -14,43 +14,57 @@
 - [x] 個人認為完成作業須具備觀念
 
 ## 說明程式與內容
+(a)初步類別圖<br/>
+<img src="./圖/初步類別圖.png">
+<br/>
+(b)系統循序圖<br/>
+1.<img src="./圖/循序圖1.png">
+<br/>
+2.<img src="./圖/循序圖2.png">
+<br/>
+3.<img src="./圖/循序圖3.png">
+<br/>
+4.<img src="./圖/循序圖4.png">
+<br/>
+5.<img src="./圖/循序圖5.png">
+<br/>
+(c)合約
 
-開始寫說明，該說明需說明想法，
-並於之後再對上述想法的每一部分將程式進一步進行展現，
-若需引用程式區則使用下面方法，
-若為.cs檔內程式除了於敘述中需註明檔案名稱外，
-還需使用語法` ```語言種類 程式碼 ``` `，其中語言種類若是要用python則使用py，java則使用java，C/C++則使用cpp，
-下段程式碼為語言種類選擇csharp使用後結果：
+| 合約1 | getMailPackgeInfo|
+ | ---- | ---- | 
+| 操作 | getMailPackgeInfo() | 
+| 交互參照 | 使用案例：取得包裹訊息 |
+| 前置條件 | 郵差或貨運公司送達信件或包裹。 | 
+| 後置條件 | 包裹或信件的簽收信息錄入APP |
 
-```csharp
-public void mt_getResult(){
-    ...
-}
-```
+| 合約2 | updateUserProfile|
+ | ---- | ---- | 
+| 操作 | updateUserProfile | 
+| 交互參照 | 使用案例：更新使用者資料 |
+| 前置條件 | 包裹或信件已簽收並記錄住戶信息。 | 
+| 後置條件 | 住戶收到APP推播簡訊通知。 |
 
-若要於內文中標示部分網頁檔，則使用以下標籤` ```html 程式碼 ``` `，
-下段程式碼則為使用後結果：
+| 合約3 | publishAnnouncement|
+ | ---- | ---- | 
+| 操作 | publishAnnouncement | 
+| 交互參照 | 使用案例：發布公告 |
+| 前置條件 | 發起者已登錄APP。 | 
+| 後置條件 | 公告成功發布，所有綁定手機的住戶可以查看。 |
 
-```html
-<%@ Page Language="C#" AutoEventWireup="true" ...>
+| 合約4 | eplyToAnnouncement|
+ | ---- | ---- | 
+| 操作 | replyToAnnouncement| 
+| 交互參照 | 使用案例：回覆公告 |
+| 前置條件 | 公告已發布。 | 
+| 後置條件 | 住戶的回應成功顯示在公告下。 |
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" ...>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
-```
-更多markdown方法可參閱[https://ithelp.ithome.com.tw/articles/10203758](https://ithelp.ithome.com.tw/articles/10203758)
-
-## 個人認為完成作業須具備觀念
+| 合約5 | getNotification|
+ | ---- | ---- | 
+| 操作 | getNotification| 
+| 交互參照 | 使用案例：得到通知 |
+| 前置條件 | 公告已順利發布。 | 
+| 後置條件 | 用戶順利得到通知。 |
 
 開始寫說明，需要說明本次作業個人覺得需學會那些觀念，亦可作為學習筆記使用 (需寫成文章，需最少50字，並且文內不得有你、我、他三種文字)
+<br/>
+設計和使用社區大樓APP需學會信件包裹收發流程、公告管理操作、角色權限分配及前後置條件設定，這些觀念提升系統設計與管理效率，確保業務便捷有序。
